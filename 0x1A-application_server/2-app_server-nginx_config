@@ -1,0 +1,22 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name 34.207.221.247;
+
+    add_header X-Served-By 516618-web-01;
+
+    location /airbnb-onepage/ {
+         proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
+
+    location /redirect_me {
+        return 301 https://github.com/gitere001;
+    }
+
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;
+      internal;
+    }
+}
