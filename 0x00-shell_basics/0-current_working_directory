@@ -1,2 +1,8 @@
 #!/bin/bash
+
+# Print the absolute path of the current working directory
+# The `pwd` command gives the absolute path of the current working directory
 pwd
+
+# Ensure the script ends with a new line (echo without any arguments)
+echo
